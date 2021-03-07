@@ -13,6 +13,6 @@ app.use('/api', router);
 app.use('/static', express.static('./static/'));
 const port = config.appPort;
 app.listen(port, () => {
-  console.log('serve', port);
+  console.log('server', port || 3000);
 });
 require('./jobs/pingHeroky').start();
