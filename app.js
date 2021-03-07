@@ -8,10 +8,11 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use('/api', router);
 app.use('/static', express.static('./static/'));
-const port = config.appKey;
+const port = config.appPort;
 app.listen(port, () => {
   console.log('serve', port);
 });
+require('./jobs/pingHeroky').start();
