@@ -1,30 +1,33 @@
-require('dotenv').config()
+require('dotenv').config();
 
-console.log(process.env.DB_USER)
-console.log(process.env.DB_PASSWORD)
-console.log(process.env.DB_DATABASE)
-console.log(process.env.DB_HOST)
+console.log(process.env.DB_USER);
+console.log(process.env.DB_PASSWORD);
+console.log(process.env.DB_DATABASE);
+console.log(process.env.DB_HOST);
 
 module.exports = {
-  "development": {
-    "username": process.env.DB_USER,
-    "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_DATABASE,
-    "host": process.env.DB_HOST,
-    "dialect": "postgres"
+  development: {
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    host: process.env.DB_HOST,
+    dialect: 'postgres',
+    DATABASE_URL: process.env.DATABASE_URL,
   },
-  "test": {
-    "username": process.env.DB_USER,
-    "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_DATABASE,
-    "host": process.env.DB_HOST,
-    "dialect": "postgres"
+  test: {
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    host: process.env.DB_HOST,
+    dialect: 'postgres',
+    DATABASE_URL: process.env.DATABASE_URL,
   },
-  "production": {
-    "username": process.env.DB_USER,
-    "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_DATABASE,
-    "host": process.env.DB_HOST,
-    "dialect": "postgres"
-  }
-}
+  production: {
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    host: process.env.DB_HOST,
+    dialect: 'postgres',
+    DATABASE_URL: process.env.DATABASE_URL,
+  },
+};
