@@ -68,7 +68,7 @@ router.get('/category', aunteficate(), async (req, res, next) => {
     }
     res.json(board);
   } catch (err) {
-    return res.status(403).json({ message: 'something went wrong' });
+    return res.status(403).json({ message: err });
   }
 });
 
